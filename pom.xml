@@ -8,4 +8,28 @@
     <artifactId>durian</artifactId>
     <version>0.0.1</version>
     <packaging>pom</packaging>
+
+    <modules>
+        <module>common</module>
+    </modules>
+
+    <properties>
+        <junit.jupiter.version>5.8.2</junit.jupiter.version>
+
+        <java.version>17</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter</artifactId>
+                <version>${junit.jupiter.version}</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>
