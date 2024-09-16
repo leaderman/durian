@@ -1,0 +1,4 @@
+durian:
+  aigc:
+    deepseek:
+      token: ${AIGC_DEEPSEEK_TOKEN}
