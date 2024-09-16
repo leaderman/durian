@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.miaoyurun</groupId>
         <artifactId>durian</artifactId>
-        <version>0.0.2</version>
+        <version>0.0.3-SNAPSHOT</version>
     </parent>
 
     <artifactId>durian-common</artifactId>
