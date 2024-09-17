@@ -6,5 +6,5 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class ResponseFormat {
-    Type type;
+    private Type type;
 }
