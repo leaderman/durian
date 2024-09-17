@@ -1,3 +1,8 @@
+logging:
+  level:
+    root: info
+    com.miaoyurun.durian.aigc: debug
+
 durian:
   aigc:
     deepseek:
