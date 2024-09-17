@@ -1,4 +1,4 @@
-package com.miaoyurun.durian.aigc.deepseek.model;
+package com.miaoyurun.durian.aigc.deepseek.entity;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 import lombok.Getter;

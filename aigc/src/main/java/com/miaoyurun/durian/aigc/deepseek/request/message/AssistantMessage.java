@@ -1,6 +1,6 @@
 package com.miaoyurun.durian.aigc.deepseek.request.message;
 
-import com.miaoyurun.durian.aigc.deepseek.model.Role;
+import com.miaoyurun.durian.aigc.deepseek.entity.Role;
 import com.miaoyurun.durian.common.constant.General;
 
 public class AssistantMessage extends Message {

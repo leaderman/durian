@@ -1,6 +1,6 @@
 package com.miaoyurun.durian.aigc.deepseek;
 
-import com.miaoyurun.durian.aigc.deepseek.model.Model;
+import com.miaoyurun.durian.aigc.deepseek.entity.Model;
 import com.miaoyurun.durian.aigc.deepseek.request.ChatCompletionsRequest;
 import com.miaoyurun.durian.aigc.deepseek.request.message.Message;
 import com.miaoyurun.durian.aigc.deepseek.request.message.SystemMessage;

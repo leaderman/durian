@@ -1,6 +1,6 @@
 package com.miaoyurun.durian.aigc.deepseek.response;
 
-import com.miaoyurun.durian.aigc.deepseek.model.Role;
+import com.miaoyurun.durian.aigc.deepseek.entity.Role;
 import lombok.Data;
 
 @Data

@@ -2,7 +2,7 @@ package com.miaoyurun.durian.aigc.deepseek.request;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.miaoyurun.durian.aigc.deepseek.model.Model;
+import com.miaoyurun.durian.aigc.deepseek.entity.Model;
 import com.miaoyurun.durian.aigc.deepseek.request.message.Message;
 import lombok.Data;
 
