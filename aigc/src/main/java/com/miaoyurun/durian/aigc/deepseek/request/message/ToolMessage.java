@@ -1,8 +1,8 @@
 package com.miaoyurun.durian.aigc.deepseek.request.message;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.miaoyurun.durian.aigc.deepseek.entity.Message;
 import com.miaoyurun.durian.aigc.deepseek.entity.Role;
-import com.miaoyurun.durian.common.constant.General;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
@@ -10,15 +10,12 @@ import lombok.ToString;
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
-public class SystemMessage extends Message {
-    private String name;
+public class ToolMessage extends Message {
+    @JsonProperty("tool_call_id")
+    private String toolCallId;
 
-    public SystemMessage(String name, String content) {
-        super(Role.SYSTEM, content);
-        this.name = name;
-    }
-
-    public SystemMessage(String content) {
-        this(General.Empty, content);
+    public ToolMessage(String toolCallId, String content) {
+        super(Role.TOOL, content);
+        this.toolCallId = toolCallId;
     }
 }

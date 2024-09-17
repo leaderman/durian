@@ -8,5 +8,5 @@ public class Choice {
     @JsonProperty("finish_reason")
     private FinishReason finishReason;
     private int index;
-    private Message message;
+    private ChoiceMessage message;
 }

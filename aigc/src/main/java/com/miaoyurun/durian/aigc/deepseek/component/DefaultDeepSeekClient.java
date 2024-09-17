@@ -10,6 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -45,7 +46,11 @@ public class DefaultDeepSeekClient implements DeepSeekClient {
                 .header(HttpHeaders.AUTHORIZATION, AUTHORIZATION_PREFIX + token)
                 .bodyValue(request)
                 .retrieve()
-                .bodyToMono(String.class).block();
+                .onStatus(HttpStatus::isError, response -> response.bodyToMono(String.class)
+                        .doOnNext(body -> log.error("chatCompletions error: {}", body))
+                        .then(response.createException()))
+                .bodyToMono(String.class)
+                .block();
         log.debug("chatCompletions result: {}", result);
 
         try {
@@ -66,6 +71,9 @@ public class DefaultDeepSeekClient implements DeepSeekClient {
                 .header(HttpHeaders.AUTHORIZATION, AUTHORIZATION_PREFIX + token)
                 .bodyValue(request)
                 .retrieve()
+                .onStatus(HttpStatus::isError, response -> response.bodyToMono(String.class)
+                        .doOnNext(body -> log.error("chatCompletionsStream error: {}", body))
+                        .then(response.createException()))
                 .bodyToFlux(String.class);
     }
 }

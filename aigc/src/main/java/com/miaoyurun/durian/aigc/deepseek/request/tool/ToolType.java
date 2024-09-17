@@ -1,4 +1,4 @@
-package com.miaoyurun.durian.aigc.deepseek.entity;
+package com.miaoyurun.durian.aigc.deepseek.request.tool;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 import lombok.Getter;
@@ -6,11 +6,8 @@ import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 @Getter
-public enum Role {
-    SYSTEM("system"),
-    USER("user"),
-    ASSISTANT("assistant"),
-    TOOL("tool");
+public enum ToolType {
+    FUNCTION("function");
 
     @JsonValue
     private final String name;
