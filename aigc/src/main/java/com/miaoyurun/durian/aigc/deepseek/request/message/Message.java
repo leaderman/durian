@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 public abstract class Message {
-    protected final String name;
-    protected final Role role;
-    protected final String content;
+    private final String name;
+    private final Role role;
+    private final String content;
 }
