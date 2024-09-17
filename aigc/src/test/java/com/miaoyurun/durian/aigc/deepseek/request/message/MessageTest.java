@@ -14,12 +14,27 @@ public class MessageTest {
         log.info("System role: {}", system.getRole());
         log.info("System content: {}", system.getContent());
 
+        system = new SystemMessage("I'm another system message");
+        log.info("System name: {}", system.getName());
+        log.info("System role: {}", system.getRole());
+        log.info("System content: {}", system.getContent());
+
         Message user = new UserMessage("user", "I'm a user message");
         log.info("User name: {}", user.getName());
         log.info("User role: {}", user.getRole());
         log.info("User content: {}", user.getContent());
 
+        user = new UserMessage("I'm another user message");
+        log.info("User name: {}", user.getName());
+        log.info("User role: {}", user.getRole());
+        log.info("User content: {}", user.getContent());
+
         Message assistant = new AssistantMessage("assistant", "I'm an assistant message");
+        log.info("Assistant name: {}", assistant.getName());
+        log.info("Assistant role: {}", assistant.getRole());
+        log.info("Assistant content: {}", assistant.getContent());
+
+        assistant = new AssistantMessage("I'm another assistant message");
         log.info("Assistant name: {}", assistant.getName());
         log.info("Assistant role: {}", assistant.getRole());
         log.info("Assistant content: {}", assistant.getContent());
